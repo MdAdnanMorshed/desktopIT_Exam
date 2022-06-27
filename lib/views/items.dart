@@ -1,6 +1,7 @@
 
 
 import 'package:dio/dio.dart';
+import 'package:exam/views/item_details.dart';
 import 'package:flutter/material.dart';
 
 class Items extends StatefulWidget {
@@ -99,6 +100,7 @@ class ItemsState extends State<Items> {
           trailing: InkWell(
               onTap: (){
                 /// Details page
+                Navigator.push (context, MaterialPageRoute (builder: (context) => ItemDetails(users[index])),);
               },
               child: Text('Details')),
         ),
@@ -114,7 +116,7 @@ class ItemsState extends State<Items> {
 
       print(url);
       final response = await dio.get(url);
-      print('res::'+response.statusCode.toString());
+      print('res code::'+response.statusCode.toString());
 
 
       List<dynamic> tList=[];
