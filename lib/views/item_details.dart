@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class ItemDetails extends StatefulWidget {
 
   var users;
-  
+
   ItemDetails(this.users);
 
 
